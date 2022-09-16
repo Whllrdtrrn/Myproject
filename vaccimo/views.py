@@ -24,7 +24,7 @@ def login_page(request):
                 return render (request,'login_page.html', {'error':'Invalid Username or Password'}) 
     else:
      return render(request,'login_page.html')
-    
+     
 
 
 def register_page(request):
