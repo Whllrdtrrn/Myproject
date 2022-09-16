@@ -1,0 +1,265 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>Document</title>
+
+<style>
+  *{
+    margin: 0%;
+  padding: 0%;
+  }
+  input{
+    margin-right: 5px;
+  }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+.btn {
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+ 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100px;
+  align-self: center;
+  margin: 20px;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+.container{
+  line-height: 25px;
+  text-align:-webkit-center;
+  position: relative;
+
+}
+.container-body{
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.card{
+    top: 20%;
+    width: 60%;
+    margin: auto;
+    padding: 27px;
+}
+.card h2{
+margin-bottom: 30px;
+}
+.text{    position: absolute;
+    width: 100%;
+    top: 70px;}
+</style>
+</head>
+<body>
+  <img id="bg-main" src="{% static 'images/login.jpg' %}" alt="Cover Image" style="position: absolute; height: 100%; width: 100%;" /> 
+  <div class="container-body">
+    <div class="text">    <h1>Screening Questionaire for Vaccination</h1></div>
+
+    <div class="card ">
+   
+    <div class="container mt-3" style="max-height: 300px; overflow-y: auto;">
+<table width="auto"cellpadding="2">
+  <tr>
+    <td colspan="4"height="40"><span style="color:red"><b>QUESTION :</b></span></td>
+  </tr>
+  <tr>
+    <td width="400"height="60"><b><i>Have you (or any family member/s) been diagnosed with or tested positive for COVID-19 in the past three (3) months?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number1">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number1">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number1">No</td>
+  </tr>
+  <tr>
+    <td colspan="4"height="40"><b><i>Do you or have you the following symptoms in the past 14 days?</i></b></td>
+  </tr>
+  <tr>
+    <td><i>- Fever of greater than 37.5°C</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number2">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number2">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number2">No</td>
+  </tr>
+  <tr>
+    <td><i>- Do you or have you had any 'flu-like' symptoms, such as cough or chills, in the past 14 days?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number3">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number3">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number3">No</td>
+  </tr>
+  <tr>
+    <td><i>- Do you experience shortness of breath or breathing difficulty?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number4">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number4">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number4">No</td>
+  </tr>
+  <tr>
+    <td><i>- Do you have any difficulties with your sense of taste or smell at present?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number5">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number5">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number5">No</td>
+  </tr>
+  <tr>
+    <td><i>- Headache, muscle or body ache</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number6">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number6">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number6">No</td>
+  </tr>
+  <tr>
+    <td><i>- Weakness or fatigue</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number7">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number7">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number7">No</td>
+  </tr>
+  <tr>
+    <td><i>- Are you experiencing diarrhea?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number8">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number8">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number8">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Do you have any allergy to food, antibiotics, or any medicine?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number9">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number9">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number9">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Have you ever had a severe reaction to vaccines in the past?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number10">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number10">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number10">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Have you received any vaccine in the last 14 days?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number11">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number11">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number11">No</td>
+  </tr>
+  <tr>
+    <td colspan="4"height="40"><b><i>For women :</i></b></td>
+  </tr>
+   <tr>
+    <td><i>- Are you pregnant</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number12">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number12">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number12">No</td>
+  </tr>
+   <tr>
+    <td><i>- For women who are pregnant, are you in your 1st trimester (1 to 3 months) of pregnancy?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number12">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number12">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number12">No</td>
+  </tr>
+   <tr>
+    <td><i>- Plans to get pregnant in the next 6 months?</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number12">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number12">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number12">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Do you have a bleeding disorder or are you taking a blood thinner? (Example of Bleeding disorder: Hemophilia, Thalassemia) (Example of blood thinning medications: Aspirin, Clopidogrel, Warfarin, Cilostazol)&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number13">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number13">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number13">No</td>
+  </tr>
+  <tr>
+    <td colspan="4"height="40"><b><i>Do you have any of the following illness/disease?</i></b></td>
+  </tr>
+  <tr>
+    <td><i>- Autoimmune disease</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number14">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number14">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number14">No</td>
+  </tr>
+  <tr>
+    <td><i>- HIV Diagnosis</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number15">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number15">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number15">No</td>
+  </tr>
+  <tr>
+    <td><i>- Cancer/Malignancy</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number16">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number16">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number16">No</td>
+  </tr>
+  <tr>
+    <td><i>- Transplant Patient</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number17">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number17">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number18">No</td>
+  </tr>
+  <tr>
+    <td><i>- Under steroid treatment</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number19">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number20">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number21">No</td>
+  </tr>
+  <tr>
+    <td><i>- Bed ridden, terminal illness, less than 6mos prognosis</i></td>
+    <td width="auto"><input type="radio"id="notsure"name="number22">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number22">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number22">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Are you bedridden?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number23">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number23">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number23">No</td>
+  </tr>
+  <tr>
+    <td width="400"height="40"><b><i>Are you wheelchair bound?&nbsp;</i></b></td>
+    <td width="auto"><input type="radio"id="notsure"name="number24">Not sure</td>
+    <td width="auto"><input type="radio"id="yes"name="number24">Yes</td>
+    <td width="auto"><input type="radio"id="no"name="number24">No</td>
+  </tr>
+</table>
+<p style="color:red;text-align:left ;  margin: 15px; ">Note: If you answered yes to any of the above-mentioned diseases/condition, please provide a medical clearance from your physician on the day of your vaccination.</p>
+<table width="auto">
+    <tr>
+      <td style="padding: 10px;"><b><i>Allergies <small>(Please check all that apply):</small></i></b>
+        <br>
+        <input type="checkbox"><small>Drug Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Food Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Insect Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Latex Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Mold Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Pet Allergy</small>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"><small>Pollen Allergy</small>
+        <br><br>
+        <b><i>With Co-morbidities? <span style="color:red;" >*</span></i></b><br>
+        <input type="radio"id="yes"name="number14"><small>YES</small>
+        <input type="radio"name="number14"><small>NO</small>
+        <br><br>
+        <b><i>Was diagnosed with COVID-19? <span style="color:red;" >*</span></i></b><br>
+        <input type="radio"id="yes"name="number25"><small>YES</small>
+        <input type="radio"name="number25"><small>NO</small>
+
+        <p><small>Please make sure you have reviewed all answers and uploaded all necessary documents, if any. No changes shall be possible after submission.<br>
+          <input type="checkbox">I have reviewed my reply and uploaded the correct documents and attest that they are all correct.</small></p>
+      </td>
+     </tr>
+</table>
+</div>
+<button type="button" onclick="alert('RESPONSE HAS BEEN SUBMITTED')"class="btn btn-primary mb-3">SUBMIT</button>  
+
+</div>
+
+</div>
+</body>
+</html>
+
