@@ -15,3 +15,13 @@ body{
 .form-group{
     margin: 10px;
 }
+.modals{
+    position: absolute;
+    z-index: 10;
+    left: 20%;
+    top: 1rem;
+    display: none;
+    font-size: 17px;
+    width: 60%;
+    background-color: antiquewhite;
+}

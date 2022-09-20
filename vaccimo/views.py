@@ -24,8 +24,7 @@ def login_page(request):
                 return render (request,'login_page.html', {'error':'Invalid Username or Password'}) 
     else:
      return render(request,'login_page.html')
-     
-
+    
 
 def register_page(request):
     if request.method == 'POST':
@@ -48,12 +47,10 @@ def register_page(request):
                 
                 return redirect('loginpage')
 
-
         else:
             messages.info(request, 'Both passwords are not matching')
             return redirect('register_page')
             
-
     else:
         return render(request, 'register_page.html')  
 
@@ -70,7 +67,7 @@ def information_page (request):
         ages = request.POST['age']
         bdays = request.POST['bday']
         genders = request.POST['gender']
-
+        
         item = user (name=names,email=emails,contact_number=contact_numbers,
         vaccination_brand=vaccination_brands,vaccination_site=vaccination_sites,address=addresss,
         age=ages,bday=bdays,gender=genders)
@@ -83,27 +80,28 @@ def information_page (request):
 
 
 def sideeffect_page(request):
+    
     if request.method == 'POST':
-        muscle_ache = request.POST['muscle_ache']
-        headache = request.POST['headache']
-        fever= request.POST['fever']
-        redness = request.POST['redness']
-        swelling = request.POST['swelling']
-        tenderness = request.POST['tenderness']
-        warmth = request.POST['warmth']
-        itch = request.POST['itch']
-        induration= request.POST['induration']
-        feverish = request.POST['feverish']
-        chills= request.POST['chills']
-        join_pain = request.POST['join_pain']
-        fatigue= request.POST['fatigue']
-        nausea= request.POST['nausea']
-        vomiting = request.POST['vomiting']
-
-        items = sideeffect (muscle_ache=muscle_ache,headache=headache,
-        fever=fever,redness=redness,swelling=swelling,tenderness=tenderness,
-        warmth=warmth,itch=itch,induration=induration,feverish=feverish,chills=chills,
-        join_pain=join_pain,fatigue=fatigue,nausea=nausea,vomiting=vomiting)
+        muscle_ached = request.POST['muscle_ache']
+        headached = request.POST['headache']
+        feverd= request.POST['fever']
+        rednessd = request.POST['redness']
+        swellingd = request.POST['swelling']
+        tendernessd = request.POST['tenderness']
+        warmthd = request.POST['warmth']
+        itchd = request.POST['itch']
+        indurationd= request.POST['induration']
+        feverishd = request.POST['feverish']
+        chillsd= request.POST['chills']
+        join_paind = request.POST['join_pain']
+        fatigued= request.POST['fatigue']
+        nausead= request.POST['nausea']
+        vomitingd = request.POST['vomiting']
+        
+        items = sideeffect (muscle_ache=muscle_ached,headache=headached,
+        fever=feverd,redness=rednessd,swelling=swellingd,tenderness=tendernessd,
+        warmth=warmthd,itch=itchd,induration=indurationd,feverish=feverishd,chills=chillsd,
+        join_pain=join_paind,fatigue=fatigued,nausea=nausead,vomiting=vomitingd)
         items.save()
         return redirect("success")
     else:             
@@ -119,16 +117,18 @@ def success_page(request):
     template = loader.get_template('success.html')
     return HttpResponse(template.render()) 
 
+
 def dashboard (request):
      item_list = user.objects.all()
      item_lists = sideeffect.objects.all()
+     userAccount = User.objects.all()
 
      context = {
-        'item_list': item_list
+        'item_list': item_list,
+        'item_lists': item_lists,
+        'userAccount': userAccount
     }
-     context = {
-        'item_lists': item_lists
-    }
+   
      return render (request,'system/dashboard.html',context)
 
     # template = loader.get_template('system/dashboard.html')

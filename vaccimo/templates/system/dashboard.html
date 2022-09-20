@@ -111,7 +111,6 @@
                            </thead>
                            <tbody style="text-transform: capitalize;">
                               {% for i in item_list %}
-
                               <tr>
                                  <td class="cell-detail "> 
                                     <span>{{i.id}}</span>
@@ -171,89 +170,35 @@
                         <div class="panel-body">
                            <table class="table table-hover table-wrapper  text-center"style="text-transform: capitalize;padding-left:12px ">
                               <thead>
-                                 <tr>
-                                   <th >No.</th>
-                                   <th >Name</th>
-                                   <th >Muscle ache</th>
-                                   <th >Headache</th>
-                                   <th >fever</th>
-                                   <th>redness</th>
-                                   <th>swelling</th>
-                                   <th>tenderness</th>
-                                   <th>warmth</th>
-                                   <th>itch</th>
-                                   <th>induration</th>
-                                   <th>feverish</th>
-                                   <th>chills</th>
-                                   <th>join pain</th>
-                                   <th>fatigue</th>
-                                   <th>nausea</th>
-                                   <th>vomiting</th>
-                                   <th>date/time</th>
-                                   <th>Action</th>
+                                 <tr >
+                                    <th >No.</th>
+                                    <th>full name</th>
+                                    <th>age</th>
+                                    <th>gender</th>
+                                    <th>date/time</th>
                                  </tr>
                                </thead>
                               <tbody style="text-transform: capitalize;">
-                              
+                                 {% for x in userAccount %}
+
                                  <tr>
                                     <td class="cell-detail "> 
-                                       <span>s</span>
+                                       <span>{{x.id}}</span>
                                     </td>
                                     <td class="cell-detail  text-left"> 
-                                       <span>s</span>
+                                       <span>{{x.username}}</span>
                                     </td>
                                     <td class="cell-detail"> 
-                                       <span>s</span>
+                                       <span>{{x.id}}</span>
                                     </td>
                                     <td class="cell-detail"> 
-                                       <span>s</span>
+                                       <span>{{x.id}}</span>
                                     </td>
                                     <td class="cell-detail text-center"> 
-                                       <span>s</span>
+                                       <span>{{x.id}}</span>
                                     </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                    <td class="cell-detail text-center"> 
-                                       <span>s</span>
-                                    </td>
-                                 </tr>                                
+                                 </tr>
+                                 {% endfor %}                              
                               </tbody>
                            </table>
                            <hr>
@@ -292,16 +237,29 @@
                         <div class="panel-body">
                            <table class="table table-hover table-wrapper  text-center"style="text-transform: capitalize;padding-left:12px ">
                               <thead >
-                                 <tr >
+                                 <tr>
                                     <th >No.</th>
-                                    <th>full name</th>
-                                    <th>age</th>
-                                    <th>gender</th>
+                                    <th >Name</th>
+                                    <th >Muscle ache</th>
+                                    <th >Headache</th>
+                                    <th >fever</th>
+                                    <th>redness</th>
+                                    <th>swelling</th>
+                                    <th>tenderness</th>
+                                    <th>warmth</th>
+                                    <th>itch</th>
+                                    <th>induration</th>
+                                    <th>feverish</th>
+                                    <th>chills</th>
+                                    <th>join pain</th>
+                                    <th>fatigue</th>
+                                    <th>nausea</th>
+                                    <th>vomiting</th>
                                     <th>date/time</th>
-                                 </tr>
+                                    <th>Action</th>
+                                  </tr>
                               </thead>
                               <tbody style="text-transform: capitalize;">
-                              
                                  <tr>
                                     <td class="cell-detail "> 
                                        <span>s</span>
@@ -318,7 +276,49 @@
                                     <td class="cell-detail text-center"> 
                                        <span>s</span>
                                     </td>
-                                 </tr>                                
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                    <td class="cell-detail text-center"> 
+                                       <span>s</span>
+                                    </td>
+                                 </tr>                                           
                               </tbody>
                            </table>
                            <hr>
@@ -360,7 +360,7 @@
                               <thead >
                                  <tr >
                                     <th >No.</th>
-                                    <th></th>
+                                    <th>name</th>
                                     <th>age</th>
                                     <th>gender</th>
                                     <th>date/time</th>
@@ -368,23 +368,23 @@
 
                               </thead>
                               <tbody style="text-transform: capitalize;">
-                                 {% for i in details %}
+                                 {% for i in item_list %}
 
                                  <tr>
                                     <td class="cell-detail "> 
-                                       <span>s</span>
+                                       <span>{{i.id}}</span>
                                     </td>
                                     <td class="cell-detail  text-left"> 
-                                       <span>s</span>
+                                       <span>{{i.name}}</span>
                                     </td>
                                     <td class="cell-detail"> 
-                                       <span>s</span>
+                                       <span>{{i.id}}</span>
                                     </td>
                                     <td class="cell-detail"> 
-                                       <span>s</span>
+                                       <span>{{i.id}}</span>
                                     </td>
                                     <td class="cell-detail text-center"> 
-                                       <span>s</span>
+                                       <span>{{i.id}}</span>
                                     </td>
                                  </tr>   
                                  {% endfor %}

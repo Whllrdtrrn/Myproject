@@ -11,8 +11,5 @@ urlpatterns = [
     path('side-effect-page/', views.sideeffect_page, name='sideeffect' ),
     path('success-page/', views.success_page, name='success' ),
     path('dashboard/', views.dashboard, name='dashboard' ),
-
-
-
-
+    
 ]
